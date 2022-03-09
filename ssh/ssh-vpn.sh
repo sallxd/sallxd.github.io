@@ -645,6 +645,7 @@ chmod +x cektrgo
 chmod +x menu-backup
 chmod +x menu-domain
 chmod +x menu-l2tp
+chmod +x menu-lisensi
 chmod +x menu
 chmod +x menu-pptp
 chmod +x menu-shadowsocks
