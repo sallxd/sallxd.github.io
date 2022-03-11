@@ -40,8 +40,6 @@ geovpnnnnnnnn="sallxd.github.io/backup"
 geovpnnnnnnnnn="sallxd.github.io/websocket"
 # Link Hosting Kalian Untuk Ohp
 geovpnnnnnnnnnn="sallxd.github.io/ohp"
-# Link Hosting Kalian Untuk Addip
-geovpnnnnnnnnnnn="sallxd.github.io/addip"
 #######################################################
 apt-get update -y > /dev/null 2>&1
 apt-get upgrade -y > /dev/null 2>&1
@@ -242,10 +240,6 @@ clear
 yellow "Open HTTP Puncher Successfully Installed..."
 sleep 1
 clear
-wget https://${geovpnnnnnnnnnnn}/addip.sh && chmod +x addip.sh && ./addip.sh > /dev/null 2>&1
-echo -e "MENU LISENSI SELESAI DI INSTALL"
-sleep 1
-clear
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -256,7 +250,6 @@ rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
 rm -f /root/edu.sh
 rm -f /root/ohp.sh
-rm -f /root/addip.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
