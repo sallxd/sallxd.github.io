@@ -98,6 +98,19 @@ chck_b(){
     fi
 }
 echo -e ""
+
+if [ ! -f "/etc/afak.conf" ]; then
+ISP=`curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf`
+CITY=`curl -sS ip-api.com | grep -w "city" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+WKT=`curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+IPVPS=`curl -sS ip-api.com | grep -w "query" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+else
+ISP=$(cat /etc/afak.conf | awk 'NR==1 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+CITY=$(cat /etc/afak.conf | awk 'NR==2 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+WKT=$(cat /etc/afak.conf | awk 'NR==3 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+IPVPS=$(cat /etc/afak.conf | awk 'NR==4 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+fi
+
 #DOMAIN=$(cat /etc/xray/domain)
 #RAM
 tram=$( free -m | awk 'NR==2 {print $2}' )
@@ -105,6 +118,9 @@ echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e " ❇️$bd Isp         ${color1} •${color3}$bd $ISP"
+echo -e " ❇️$bd City         ${color1} •${color3}$bd $CITY"
+echo -e " ❇️$bd Waktu         ${color1} •${color3}$bd $tram MB"
 echo -e " ❇️$bd Total RAM         ${color1} •${color3}$bd $tram MB"
 echo -e " ❇️$bd IP VPS            ${color1} •${color3}$bd $MYIP"
 echo -e " ❇️$bd Client Name       ${color1} •${color3}$bd $Name"
