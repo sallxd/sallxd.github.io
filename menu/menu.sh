@@ -120,7 +120,7 @@ echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                  
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " ❇️$bd Isp               ${color1} •${color3}$bd $ISP"
 echo -e " ❇️$bd City              ${color1} •${color3}$bd $CITY"
-echo -e " ❇️$bd Waktu             ${color1} •${color3}$bd $tram MB"
+echo -e " ❇️$bd Waktu             ${color1} •${color3}$bd $WKT"
 echo -e " ❇️$bd Total RAM         ${color1} •${color3}$bd $tram MB"
 echo -e " ❇️$bd IP VPS            ${color1} •${color3}$bd $MYIP"
 echo -e " ❇️$bd Client Name       ${color1} •${color3}$bd $Name"
