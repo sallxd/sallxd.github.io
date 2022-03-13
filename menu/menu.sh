@@ -109,6 +109,12 @@ ISP=$(cat /etc/afak.conf | awk 'NR==1 {print $1,$2,$3,$4,$5,$6,$7,$8}')
 CITY=$(cat /etc/afak.conf | awk 'NR==2 {print $1,$2,$3,$4,$5,$6,$7,$8}')
 WKT=$(cat /etc/afak.conf | awk 'NR==3 {print $1,$2,$3,$4,$5,$6,$7,$8}')
 IPVPS=$(cat /etc/afak.conf | awk 'NR==4 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+jam=$(date +"%T")
+hari=$(date +"%A")
+tnggl=$(date +"%d-%B-%Y")
+	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 fi
 
 #DOMAIN=$(cat /etc/xray/domain)
@@ -121,8 +127,13 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e " ❇️$bd Isp               ${color1} •${color3}$bd $ISP"
 echo -e " ❇️$bd City              ${color1} •${color3}$bd $CITY"
 echo -e " ❇️$bd Waktu             ${color1} •${color3}$bd $WKT"
-echo -e " ❇️$bd Total RAM         ${color1} •${color3}$bd $tram MB"
 echo -e " ❇️$bd IP VPS            ${color1} •${color3}$bd $MYIP"
+echo -e " ❇️$bd Total RAM         ${color1} •${color3}$bd $tram MB"
+echo -e " ❇️$bd Numbers Core      ${color1} •${color3}$bd $cores"
+echo -e " ❇️$bd CPU Frequency     ${color1} •${color3}$bd$freq MHz"
+echo -e " ❇️$bd Waktu             ${color1} •${color3}$bd $jam"
+echo -e " ❇️$bd Hari              ${color1} •${color3}$bd $hari"
+echo -e " ❇️$bd Tanggal           ${color1} •${color3}$bd $tnggl"
 echo -e " ❇️$bd Client Name       ${color1} •${color3}$bd $Name"
 echo -e " ❇️$bd Expiry script     ${color1} •${color3}$bd $Exp"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
