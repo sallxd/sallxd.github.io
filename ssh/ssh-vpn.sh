@@ -659,17 +659,6 @@ chmod +x status
 chmod +x bbr
 chmod +x update
 chmod +x bannerku
-chmod +x bannerDOMAIN
-chmod +x bannerL2TP
-chmod +x bannerPPTP
-chmod +x bannerSHADOWSOCK
-chmod +x bannerSSH
-chmod +x bannerSSTP
-chmod +x bannerSYSTEM
-chmod +x bannerTROJAN
-chmod +x bannerV2RAY
-chmod +x bannerVPN
-chmod +x bannerWIREGUARD
 chmod +x portsshws
 chmod +x portsshnontls
 chmod +x cfd
