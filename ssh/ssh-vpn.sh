@@ -214,7 +214,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant AUTOSCRIPT SALLVPN | lolcat" >> .profile
+echo "figlet -f slant AUTOSCRIPT | lolcat" >> .profile
 echo "sleep 0.5" >> .profile
 echo "clear" >> .profile
 echo "running " >> .profile
@@ -659,17 +659,6 @@ chmod +x status
 chmod +x bbr
 chmod +x update
 chmod +x bannerku
-chmod +x bannerDOMAIN
-chmod +x bannerL2TP
-chmod +x bannerPPTP
-chmod +x bannerSHADOWSOCK
-chmod +x bannerSSH
-chmod +x bannerSSTP
-chmod +x bannerSYSTEM
-chmod +x bannerTROJAN
-chmod +x bannerV2RAY
-chmod +x bannerVPN
-chmod +x bannerWIREGUARD
 chmod +x portsshws
 chmod +x portsshnontls
 chmod +x cfd
