@@ -11,9 +11,9 @@ echo ""
 echo "  GUNAKAN BOT SEBIJAK MUNGKIN"
 echo ""
 source /var/lib/geovpnstore/ipvps.conf
-domain=$IP
+domain=$(cat /etc/xray/domain)
 ips=$(wget -qO- ipinfo.io/ip);
-chatid="-1001787165690";
+chatid="1001787165690";
 api="5264392890:AAGcsX92ZFs4nTUTOjTKZDUb6Tsc-u0Dx-s";
 date=$(date +"%Y-%m-%d" | cut -d "-" -f 2-3);
 time=$(date +"%H:%M:%S" | cut -d ":" -f 1-2);
