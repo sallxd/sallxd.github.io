@@ -117,7 +117,7 @@ tnggl=$(date +"%d-%B-%Y")
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 fi
 
-#DOMAIN=$(cat /etc/xray/domain)
+DOMAIN=$(cat /etc/xray/domain)
 #RAM
 tram=$( free -m | awk 'NR==2 {print $2}' )
 echo -e ""
